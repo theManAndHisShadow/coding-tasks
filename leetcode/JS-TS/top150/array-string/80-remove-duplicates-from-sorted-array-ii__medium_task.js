@@ -23,7 +23,11 @@
  * @return {number}
  */
 const removeDuplicates = function (nums) {
-    // N.B.: check "two-pointer technique" for performance improvements! 
+    // N.B.: check "two-pointer technique" performance comporation at 'misc/performance-test-for-task-n80.ts'
+    // Benchmark result:
+    // -> Splice method: 10.695ms
+    // -> Two Pointers method: 0.663ms
+    
     // Current realisation has performance issues on big arrays (up to 30k items)
     for (let i = 0; i < nums.length; i++) {
         if (nums[i - 1] == nums[i] && nums[i + 1] == nums[i]) {
